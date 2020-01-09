@@ -14,3 +14,22 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+
+jQuery(document).ready(function($){
+    
+    $('a.scroll-link').click(function(e){
+        e.preventDefault();
+        $id = $(this).attr('href');
+        $('body,html').animate({
+            scrollTop: $($id).offset().top -20
+        }, 750);
+    });
+    
+});
+
+

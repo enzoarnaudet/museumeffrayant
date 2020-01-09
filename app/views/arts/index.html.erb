@@ -1,16 +1,78 @@
-<p id="notice"><%= notice %></p>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace&display=swap');
+</style> 
 
-<h1>Musée de Enzo</h1>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+</style>
+
+
+
+
+
+
+<div class="hero">
+    
+    <h1><br>Scrolling with your mouse </h1>
+    
+    <a class="scroll-link" href="#content">
+        <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
+        <g fill="none" fill-rule="evenodd">
+            <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36"/>
+            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF"/>
+        </g>
+    </svg>
+    </a>
+    
+</div>
+
+<div id="content" class="content">
+    
+  
+    <p></p>
+    
+</div>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="">Horror's Museum</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Auteurs.html">Auteurs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Oeuvres.html">Oeuvres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Boutiques.html">Boutiques</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h3>Horror's Museum</h3>
+
+
+<br>
 
 <table>
   <thead>
+
     <tr>
-      <th>Auteur</th>
-      <th>Titre</th>
-      <th>Date</th>
-      <th>Dimensions</th>
-      <th>Photo</th>
-      <th>Commentaires</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,7 +88,8 @@
         <td><%= art.comments %></td>
         <td><%= link_to 'Voir', art %></td>
         <td><%= link_to 'Editer', edit_art_path(art) %></td>
-        <td><%= link_to 'Supprimer', art, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Supprimer', art, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +97,10 @@
 
 <br>
 
-<%= link_to 'New Art', new_art_path %>
+<%= link_to 'Ajouter une oeuvre', new_art_path %>
+
+
+
+
+
+

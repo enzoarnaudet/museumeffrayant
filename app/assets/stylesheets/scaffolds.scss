@@ -2,14 +2,23 @@ body {
   background-color: #fff;
   color: #333;
   margin: 33px;
-  font-family: Inria Serif ;
-  font-size: 23px;
+  
+
+    font-family: 'Shadows Into Light Two', cursive;
+
+
+  font-size: 50px;
   line-height: 18px;
+
 }
 
+th{
+  
+
+}
 p, ol, ul, td {
-  font-family: Inria Serif ;
-  font-size: 20px;
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 25px;
   line-height: 18px;
 }
 
@@ -82,3 +91,6 @@ div {
 label {
   display: block;
 }
+
+
+
