@@ -1,6 +1,4 @@
-<style>
-@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace&display=swap');
-</style> 
+
 
 
 <style>
@@ -9,30 +7,9 @@
 
 
 
-
-
-
-<div class="hero">
-    
-    <h1><br>Scrolling with your mouse </h1>
-    
-    <a class="scroll-link" href="#content">
-        <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
-        <g fill="none" fill-rule="evenodd">
-            <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36"/>
-            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF"/>
-        </g>
-    </svg>
-    </a>
-    
-</div>
-
-<div id="content" class="content">
-    
-  
-    <p></p>
-    
-</div>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+</style> 
 
 
 
@@ -45,16 +22,16 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="">Accueil<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Auteurs.html">Auteurs</a>
+        <a class="nav-link" href="">Auteurs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Oeuvres.html">Oeuvres</a>
+        <a class="nav-link" href="">Oeuvres</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Boutiques.html">Boutiques</a>
+        <a class="nav-link" href="">
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
@@ -63,43 +40,50 @@
   </div>
 </nav>
 
+
+
+
+
+
+
+
+
+
+
+
+
 <h3>Horror's Museum</h3>
 
-
-<br>
-
-<table>
-  <thead>
-
-    <tr>
-      
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container" >
+  <div class="row" >
     <% @arts.each do |art| %>
-      <tr>
-        <td><%= art.author %></td>
-        <td><%= art.title %></td>
-        <td><%= art.date %></td>
-        <td><%= art.dimensions %></td>
-        <td><img width="500px"src="<%= art.photo %>"></td>
-        <td><%= art.comments %></td>
-        <td><%= link_to 'Voir', art %></td>
-        <td><%= link_to 'Editer', edit_art_path(art) %></td>
-        <td><%= link_to 'Supprimer', art, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+      <div class="col-sm-4" >
+        <div class="card" style="width: 18rem;">
+          <img src="<%= art.photo %>" class="card-img-top" alt="<%= art.photo %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= art.title %></h5>
+            <p class="card-text"><%= art.comments %></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= art.author %></li>
+            <li class="list-group-item"><%= art.date %></li>
+            <li class="list-group-item"><%= art.dimensions %></li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link"><%= link_to 'Editer', edit_art_path(art) %></a>
+          <a href="#" class="card-link"><%= link_to 'Voir', art %></a>
+        </div>
+      </div>
 
-      </tr>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
+       
 
-<br>
+
 
 <%= link_to 'Ajouter une oeuvre', new_art_path %>
-
-
 
 
 
