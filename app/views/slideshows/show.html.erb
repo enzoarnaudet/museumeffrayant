@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @slideshow.author %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @slideshow.photo %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @slideshow.description %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @slideshow.text %>
+</p>
+
+<%= link_to 'Edit', edit_slideshow_path(@slideshow) %> |
+<%= link_to 'Back', slideshows_path %>

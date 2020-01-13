@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :slideshows
+  resources :auteurs
   resources :firsts
   resources :arts
   root to: "arts#index" # redirige vers arts

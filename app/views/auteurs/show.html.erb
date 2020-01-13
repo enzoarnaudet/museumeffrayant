@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @auteur.author %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @auteur.photo %>
+</p>
+
+<%= link_to 'Edit', edit_auteur_path(@auteur) %> |
+<%= link_to 'Back', auteurs_path %>
